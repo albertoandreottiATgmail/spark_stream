@@ -12,7 +12,7 @@ We're going to perform a simple operation with a "Streaming Query", which is a c
 of Spark Streaming; a query taking place on a table that grows dynamically.
 We're going to run this query for two minutes, so the first thing you will see when running this
 code will be the following,
-`
+```
 +----------+---------+
 |      name|birthyear|
 +----------+---------+
@@ -20,7 +20,7 @@ code will be the following,
 |Aleksander|     1994|
 |      Paul|     1973|
 +----------+---------+
-`
+```
 
 this is the content in people1.json. This is the first file the query found in the folder where the
 query is scanning for files. You see that the query took effect because you see birth years instead
@@ -31,7 +31,7 @@ copy another of our JSON files to the folder that is being scanned,
 ~/spark_stream$ cp src/main/resources/people2.json target/scala-2.11/classes/
 
 If you did this within the two minutes limit timeframe we set the query to run, you'll see this outpout,
-`
+```
 +-------+---------+
 |   name|birthyear|
 +-------+---------+
@@ -39,7 +39,7 @@ If you did this within the two minutes limit timeframe we set the query to run, 
 | Giulio|     1994|
 |Rudolph|     1973|
 +-------+---------+
-`
+```
 these are the other people in our second JSON file, and you can see that the transformation took place on
 them as well.
 Enjoy!.
