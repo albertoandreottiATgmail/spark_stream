@@ -9,7 +9,7 @@ import org.apache.spark.sql.{SQLContext, SparkSession}
  */
 
 
-object JSONStreaming {
+object SparkStreaming {
 
   def main(args: Array[String]) {
 
@@ -35,12 +35,13 @@ object JSONStreaming {
         .writeStream
         // check for files every 2s
         .trigger(ProcessingTime("2 seconds"))
-        .format("console") // write as JSON
+        // write in the console
+        .format("console")
         .option("path", s"$filename/birthyears")
         .start()
 
       // Wait 1 minute
-      streamingETLQuery.awaitTermination(60000)
+      streamingETLQuery.awaitTermination(120000)
 
 
   }
