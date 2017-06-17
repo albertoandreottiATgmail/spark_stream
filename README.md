@@ -27,9 +27,9 @@ query is scanning for files. You see that the query took effect because you see 
 of ages.
 Now let's go for the real fun, let's give this query more data; for this what we're goin to do is to
 copy another of our JSON files to the folder that is being scanned,
-
+```
 ~/spark_stream$ cp src/main/resources/people2.json target/scala-2.11/classes/
-
+```
 If you did this within the two minutes limit timeframe we set the query to run, you'll see this outpout,
 ```
 +-------+---------+
