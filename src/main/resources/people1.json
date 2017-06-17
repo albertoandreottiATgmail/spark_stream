@@ -1,1 +1,3 @@
-[["name", "age"], ["Juan", 22], ["Giulio", 23], ["Rudolph", 44]]
+{"name": "Maxim", "age": 22}
+{"name": "Aleksander", "age": 23}
+{"name": "Paul", "age": 44}
